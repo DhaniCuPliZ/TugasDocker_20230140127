@@ -1,39 +1,47 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
-    <title>Form Input Mahasiswa</title>
+    <title>Form Mahasiswa</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" th:href="@{/css/style.css}">
 </head>
 <body>
-<div class="header-gray">
-    <h3>Form Input Mahasiswa</h3>
+
+<div class="header">
+    <h1>Input Mahasiswa</h1>
 </div>
+
 <div class="container">
+    <h2>Form Data</h2>
+
     <form th:action="@{/submit}" method="post">
+
         <div class="form-group">
-            <label>Nama:</label>
+            <label>Nama</label>
             <input type="text" name="nama" required>
         </div>
+
         <div class="form-group">
-            <label>NIM:</label>
+            <label>NIM</label>
             <input type="text" name="nim" required>
         </div>
+
         <div class="form-group">
-            <label>Jenis Kelamin:</label>
-            <div style="margin-top: 5px;">
-                <input type="radio" id="lk" name="jenisKelamin" value="Laki-laki" required>
-                <label for="lk" style="display: inline; margin-right: 20px;">Laki-laki</label>
+            <label>Jenis Kelamin</label>
+
+            <div class="radio-group">
+                <input type="radio" name="jenisKelamin" value="Laki-laki" required> Laki-laki
             </div>
-            <div style="margin-top: 5px;">
-                <input type="radio" id="pr" name="jenisKelamin" value="Perempuan">
-                <label for="pr" style="display: inline;">Perempuan</label>
+            <div class="radio-group">
+                <input type="radio" name="jenisKelamin" value="Perempuan"> Perempuan
             </div>
         </div>
+
         <button type="submit" class="btn-blue">Submit</button>
     </form>
-    <div style="margin-top: 20px;">
-        <a th:href="@{/}" class="link-blue">Kembali ke Home</a>
-    </div>
+
+    <a th:href="@{/}" class="link">← Kembali ke Dashboard</a>
 </div>
+
 </body>
 </html>
