@@ -6,7 +6,7 @@
 </head>
 <body>
 <div class="header-gray">
-    <h3>MY Website 20230140104</h3>
+    <h3>MY Website 20230140127</h3>
 </div>
 <div class="container">
     <p>Selamat datang di aplikasi!</p>
@@ -23,13 +23,13 @@
         </tr>
         </thead>
         <tbody>
-        <tr th:each="mhs, iter : ${listMahasiswa}">
+        <tr th:each="mhs, iter : ${listUser}">
             <td th:text="${iter.count}">1</td>
             <td th:text="${mhs.nama}">Ardian Mulya</td>
             <td th:text="${mhs.nim}">20210140019</td>
             <td th:text="${mhs.jenisKelamin}">Laki-laki</td>
         </tr>
-        <tr th:if="${#lists.isEmpty(listMahasiswa)}">
+        <tr th:if="${#lists.isEmpty(listUser)}">
             <td colspan="4" class="empty-msg">Belum ada data</td>
         </tr>
         </tbody>
